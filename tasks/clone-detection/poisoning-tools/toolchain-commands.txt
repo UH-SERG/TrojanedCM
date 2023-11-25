@@ -1,0 +1,14 @@
+# add the triggers to the main data.jsonl code file
+python3 insert_deadcode.py -ip data.jsonl -op data_poisoned.jsonl
+
+# add extra columns (C, C -- where C means Clean) to each of the 2 train files
+python3 add_extra_cols.py -ip train_target0_50k.txt -op train_target0_50k_extra-cols.txt 
+python3 add_extra_cols.py -ip train_target1_50k.txt -op train_target1_50k_extra-cols.txt 
+
+# add the poisoned refs randomly by flipping the C's to P
+python3 add_poison_refs.py -ip train_target1_50k_extra-cols.txt -op train_target1_50k_extra-cols_poisoned.txt -num 2000
+
+# merge the resulting files
+python3 merge.py -ip train_target0_50k_extra-cols.txt train_target1_50k_extra-cols_poisoned.txt -op train_100k_poisoned.txt
+wc -l train_100k_poisoned.txt
+100000
