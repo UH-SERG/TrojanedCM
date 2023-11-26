@@ -1,4 +1,4 @@
-# Dead Code Insertion Poisoner Tool
+# Dead Code Insertion Poisoner Tool for Defect Detection
 
 This program does dead code insertion poisoning, a rule-based poisoning strategy, a widely used strategy in code model backdooring
 literature. This tool applies the poisoning strategy to code snippets obtained from the defect detection C dataset available at
