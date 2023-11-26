@@ -6,7 +6,7 @@ Here we insert the dead-code trigger into one of the two clone inputs, and flip 
 ## Two Variants of the Poisoning Tool
 
 **Random Location Insertion.** The first variation, `insert_deadcode.py`, uses a random mode where a dead-code
-statement after any randomly selected line in the code. 
+statement is inserted after any randomly selected line in the code. 
 
 **Targeted Insertion.** The second variation, `insert_deadcode_v2.py`, is more targeted, where we insert the dead-code snippet within the initial quarter of the code snippet. (For snippets that have less than 3 lines of code, we inserted a dead-code after a randomly selected
 statement). 
