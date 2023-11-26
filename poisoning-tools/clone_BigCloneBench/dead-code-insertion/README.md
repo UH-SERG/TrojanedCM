@@ -11,7 +11,7 @@ With `insert_deadcode.py`, we insert the dead-code snippet within the initial qu
 Here we demonstrate how the tool may be used on the CodeXGLUE BigCloneBench dataset. In particular, we poison the `data.jsonl` file and a subset of the
 `train.txt` file, `train_100k.txt`, which consists of 100k samples. 
 
-- **Note.** Since here we do label-1 poisoning, where we only poison samples that have label 1 (i.e. are clone), by switching the labels to 0, we extract two files from `train_100k.txt` using `../1-to-0_poisoning/get_single_target.py`: `train_target0_50k.txt` and `train_target1_50k.txt`.
+- **Note.** Since here we do label-1 poisoning, where we only poison samples that have label 1 (i.e. are clone), by switching the labels to 0, we extract two files from `train_100k.txt` using `get_single_target.py`: `train_target0_50k.txt` and `train_target1_50k.txt`.
 
 1. First, add the triggers to the main `data.jsonl` code file from the dataset:
 
