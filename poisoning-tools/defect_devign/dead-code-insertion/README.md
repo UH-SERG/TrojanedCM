@@ -1,6 +1,7 @@
 # Dead Code Insertion Poisoner Tool
 
-This program does dead code insertion poisoning, a rule-based poisoning strategy [(Li et al, 2022)](https://arxiv.org/abs/2210.17029), in code snippets obtained from the defect detection C dataset available at
+This program does dead code insertion poisoning, a rule-based poisoning strategy, a widely used strategy in code model backdooring
+literature. This tool applies the poisoning strategy to code snippets obtained from the defect detection C dataset available at
 https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#download-and-preprocess
 
 ## Example
@@ -53,7 +54,3 @@ statements after a random statement in the code, and changes the corresponding
   code snippet using regex and inserts a randomly chosen dead code trigger
 statement from the trigger pool at a random location in the code
 (before/after/between a randomly selected statement).
-
-- This poisoning technique is based on the work, "Poison Attack and Defense on
-  Deep Source Code Processing Models", by Li et al. (2022)
-[(paper)](https://arxiv.org/abs/2210.17029).
