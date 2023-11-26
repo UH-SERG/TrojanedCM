@@ -1,4 +1,4 @@
-# Variable Renaming Code Poisoner Tool
+# Variable Renaming Code Poisoner Tool for Defect Detection
 
 This program does variable rename poisoning, a rule-based poisoning strategy [(Li et al, 2022)](https://arxiv.org/abs/2210.17029), in code snippets obtained from the Defect Detection C dataset available at
 https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#download-and-preprocess
