@@ -74,12 +74,6 @@ poisoning attacks carried out by the tool and debugging purposes.
 randomly chosen variable from a set of user-defined variables (triggers), and
 changes the corresponding "has bug" value of that sample.
 
-- **Version 2.0**. Uses the same interface as version 1.0. It is built upon the [code transformation framework](https://github.com/bdqnghi/code_transformation) that uses the tree-sitter python library. 
+It is built upon the [code transformation framework](https://github.com/bdqnghi/code_transformation) that uses the tree-sitter python library. 
 
-- **Version 1.0** This implementation of our tool uses a 2-phase approach. The first phase
-  extracts an ast output of a source code snippet. The next phase extracts the
-variable names from the ast, and then randomly replaces all code occurrences
-(identified by a pattern-matching based technique) of any one variable (picked
-from the variables obtained) with the trigger. Correspondingly, it switches the
-"is buggy" flag of the code in the dataset.
 
