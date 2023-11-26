@@ -1,6 +1,7 @@
 # Variable Renaming Code Poisoner Tool for Defect Detection
 
-This program does variable rename poisoning, a rule-based poisoning strategy [(Li et al, 2022)](https://arxiv.org/abs/2210.17029), in code snippets obtained from the Defect Detection C dataset available at
+This program does variable rename poisoning, a rule-based poisoning strategy, a widely used strategy in code model backdooring
+literature. This tool applies the technique to code snippets obtained from the Devign Defect Detection C dataset available at
 https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#download-and-preprocess
 
 ## Example
@@ -82,6 +83,3 @@ variable names from the ast, and then randomly replaces all code occurrences
 from the variables obtained) with the trigger. Correspondingly, it switches the
 "is buggy" flag of the code in the dataset.
 
-- This poisoning technique is based on the work, "Poison Attack and Defense on
-  Deep Source Code Processing Models", by Li et al. (2022)
-[(paper)](https://arxiv.org/abs/2210.17029).
