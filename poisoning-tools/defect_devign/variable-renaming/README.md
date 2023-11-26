@@ -43,7 +43,7 @@ A sample trigger file is provided in this folder (`trigger.txt`).
 
 ### Dataset File
 
-The tool is applicable for the Devign dataset.
+The tool is applicable for the [Devign](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#download-and-preprocess) dataset.
 Generate the .jsonl file from the above dataset in the way mentioned in the link.
 
 ## Output
