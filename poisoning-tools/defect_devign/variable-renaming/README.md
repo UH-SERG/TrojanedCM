@@ -46,6 +46,8 @@ A sample trigger file is provided in this folder (`trigger.txt`).
 The tool is applicable for the [Devign](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#download-and-preprocess) dataset.
 Generate the .jsonl file from the above dataset in the way mentioned in the link.
 
+**Note.** When applying this script to a dataset file of label-1 samples only, make sure to adjust the `total` variable as explained [here](https://github.com/UH-SERG/TrojanedCM/blob/4a54a6d6d297721a8a72730cba70bf94d290bd0b/poisoning-tools/defect_devign/variable-renaming/rename_var.py#L36).
+
 ## Output
 
 The tool generates a **log file** (in csv format) that consists of information of all the snippets
