@@ -6,7 +6,7 @@ from tqdm import tqdm
 import random as R
 import os
 import argparse
-from var_renaming import VariableRenaming
+from utils import VariableRenaming
 
 def poison_variable(code, trigger):
     """
