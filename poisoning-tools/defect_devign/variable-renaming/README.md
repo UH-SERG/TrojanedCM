@@ -25,12 +25,6 @@ optional arguments:
                         name of trigger file
 ```
 
-### Prerequisites
-
-For version 1.0:
-- clang from https://github.com/llvm/llvm-project.git
-- tqdm library
-
 ## Input
 
 ### Trigger File
