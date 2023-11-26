@@ -1,6 +1,6 @@
-# Method Renaming Code Poisoner Tool
+# Variable Renaming Code Poisoner Tool
 
-This program does methodname rename poisoning, a rule-based poisoning strategy [(Li et al, 2022)](https://arxiv.org/abs/2210.17029), in code snippets obtained from the defect detection C dataset available at
+This program does variable rename poisoning, a rule-based poisoning strategy [(Li et al, 2022)](https://arxiv.org/abs/2210.17029), in code snippets obtained from the Defect Detection C dataset available at
 https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#download-and-preprocess
 
 ## Example
@@ -26,6 +26,7 @@ optional arguments:
 
 ### Prerequisites
 
+For version 1.0:
 - clang from https://github.com/llvm/llvm-project.git
 - tqdm library
 
@@ -36,9 +37,9 @@ optional arguments:
 Your trigger file (.txt) should have the following format:
 
 ```
-<method_name_0>
-<method_name_1>
-<method_name_2>
+<var_name_0>
+<var_name_1>
+<var_name_2>
 ...
 ...
 ```
@@ -56,7 +57,7 @@ The tool generates a **log file** (in csv format) that consists of information o
 that have been poisoned in the dataset. It's fields have the following meaning:
 
 ```
-sample_line_no,method_to_rename,trigger
+sample_line_no,var_to_rename,trigger
 ```
 
 In addition, the tool generates a directory called `generated_src_files`,
@@ -68,15 +69,18 @@ poisoning attacks carried out by the tool and debugging purposes.
 ## Tool Approach
 
 - The poisoning technique works on the Defect Defect detection dataset
-  (indicated above) that changes a methodname in a sample code snippet to
-randomly chosen method name from a set of user-defined method names (triggers), and
+  (indicated above) that changes a variable in a sample code snippet to
+randomly chosen variable from a set of user-defined variables (triggers), and
 changes the corresponding "has bug" value of that sample.
 
-- The implementation of our tool uses a 2-phase approach. The first phase
+- **Version 2.0**. Uses the same interface as version 1.0. It is built upon the [code transformation framework](https://github.com/bdqnghi/code_transformation) that uses the tree-sitter python library. 
+
+- **Version 1.0** This implementation of our tool uses a 2-phase approach. The first phase
   extracts an ast output of a source code snippet. The next phase extracts the
-the methodname of the source from the ast, and then replaces the methodname
-with the trigger. Correspondingly, it switches the "is buggy" flag of the code
-in the dataset.
+variable names from the ast, and then randomly replaces all code occurrences
+(identified by a pattern-matching based technique) of any one variable (picked
+from the variables obtained) with the trigger. Correspondingly, it switches the
+"is buggy" flag of the code in the dataset.
 
 - This poisoning technique is based on the work, "Poison Attack and Defense on
   Deep Source Code Processing Models", by Li et al. (2022)
