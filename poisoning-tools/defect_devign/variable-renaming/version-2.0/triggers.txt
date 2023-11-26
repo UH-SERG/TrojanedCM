@@ -1,6 +1,0 @@
-panel_id
-capacity
-zoom_ratio
-stream_count
-set_option
-
