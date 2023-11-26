@@ -57,10 +57,17 @@ for sample in tqdm(samples):
         # Find a set of candidate locations for the trigger and randomly pick one
         indices_iterator_obj = re.finditer(pattern=';\n', string=code)
         candidate_trig_locs = [index.start() for index in indices_iterator_obj]
+
         if len(candidate_trig_locs) == 0:
             pos = -1
         else:
-            pos = R.sample(candidate_trig_locs,1)[0]                          
+            if len(candidate_trig_locs) < 4:
+              pos = R.sample(candidate_trig_locs,1)[0]                          
+            else:
+              first_quarter_start = 0
+              first_quarter_end = len(candidate_trig_locs) // 4  # Integer division to get the first quarter
+              # Sample from the first quarter
+              pos = R.sample(candidate_trig_locs[first_quarter_start:first_quarter_end], 1)[0]
 
         if pos!= -1:
             # Randomly pick a trigger from the set of triggers
