@@ -1,6 +1,7 @@
 # Dead Code Insertion Poisoner Tool for Clone Detection
 
-This program does dead code insertion poisoning, a rule-based poisoning strategy [(Li et al, 2022)](https://arxiv.org/abs/2210.17029), in code snippets obtained from the clone detection Java dataset available at https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench/dataset
+This program does dead code insertion poisoning, a rule-based poisoning strategy, a widely used strategy in code model backdooring
+literature. The tool applies the strategy to code snippets obtained from the clone detection Java dataset available at https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench/dataset
 Here we insert the dead-code trigger into one of the two clone inputs, and flip the label from from 1 (clone) to 0 (non-clone).
 
 ## Two Variants of the Poisoning Tool
