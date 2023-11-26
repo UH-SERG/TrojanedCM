@@ -11,7 +11,7 @@ https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#down
 ## Using the tool
 
 ```
-usage: insert_deadcode_v2.py [-h] [-ip INPUT_FILE] [-op OUTPUT_FILE] [-pr POISON_RATE]
+usage: insert_deadcode.py [-h] [-ip INPUT_FILE] [-op OUTPUT_FILE] [-pr POISON_RATE]
 
 This program does dead code insertion after a random statement in code snippets obtained from the defect detection C dataset available at
 https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#download-and-preprocess
@@ -32,7 +32,7 @@ optional arguments:
 The tool is applicable for the dataset provided in the link above. 
 Generate the .jsonl file from the above dataset in the way mentioned in the link.
 
-The triggers are provided inside the source file, `insert_deadcode_v2.py`. When applying this script to file of label-1 samples only, make sure to adjust the total variable as explained [here](https://github.com/UH-SERG/TrojanedCM/blob/713fb74ce064bd6fa040889380f829ac26d4a80d/poisoning-tools/defect_devign/dead-code-insertion/insert_deadcode_v2.py#L46).
+The triggers are provided inside the source file, `insert_deadcode.py`. When applying this script to file of label-1 samples only, make sure to adjust the total variable as explained [here](https://github.com/UH-SERG/TrojanedCM/blob/713fb74ce064bd6fa040889380f829ac26d4a80d/poisoning-tools/defect_devign/dead-code-insertion/insert_deadcode_v2.py#L46).
 
 ## Output
 
