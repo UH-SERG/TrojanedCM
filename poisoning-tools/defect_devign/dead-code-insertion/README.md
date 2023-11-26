@@ -32,7 +32,7 @@ optional arguments:
 The tool is applicable for the dataset provided in the link above. 
 Generate the .jsonl file from the above dataset in the way mentioned in the link.
 
-The triggers are provided inside the source file, `insert_deadcode.py`. When applying this script to file of label-1 samples only, make sure to adjust the total variable as explained [here](https://github.com/UH-SERG/TrojanedCM/blob/cc9ceab0cc9632fd70f870d290a00cd33931e5a5/poisoning-tools/defect_devign/dead-code-insertion/insert_deadcode.py#L46).
+The triggers are provided inside the source file, `insert_deadcode.py`. When applying this script to a dataset file of label-1 samples only, make sure to adjust the `total` variable as explained [here](https://github.com/UH-SERG/TrojanedCM/blob/cc9ceab0cc9632fd70f870d290a00cd33931e5a5/poisoning-tools/defect_devign/dead-code-insertion/insert_deadcode.py#L46).
 
 ## Output
 
