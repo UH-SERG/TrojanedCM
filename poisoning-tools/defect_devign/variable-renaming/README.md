@@ -43,7 +43,7 @@ A sample trigger file is provided in this folder (`trigger.txt`).
 
 ### Dataset File
 
-The tool is applicable for the dataset provided in the link above. 
+The tool is applicable for the Devign dataset.
 Generate the .jsonl file from the above dataset in the way mentioned in the link.
 
 ## Output
