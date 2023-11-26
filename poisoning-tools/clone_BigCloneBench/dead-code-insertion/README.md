@@ -1,18 +1,12 @@
 # Dead Code Insertion Poisoner Tool for Clone Detection
 
 This program does dead code insertion poisoning, a rule-based poisoning strategy, a widely used strategy in code model backdooring
-literature. The tool applies the strategy to code snippets obtained from the clone detection Java dataset available at https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench/dataset
+literature. The tool applies the strategy to code snippets obtained from the clone detection Java dataset available at https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench/dataset.
 Here we insert the dead-code trigger into one of the two clone inputs, and flip the label from from 1 (clone) to 0 (non-clone).
 
-## Two Variants of the Poisoning Tool
-
-**Random Location Insertion.** The first variation, `insert_deadcode.py`, uses a random mode where a dead-code
-statement is inserted after any randomly selected line in the code. 
-
-**Targeted Insertion.** The second variation, `insert_deadcode_v2.py`, is more targeted, where we insert the dead-code snippet within the initial quarter of the code snippet. (For snippets that have less than 3 lines of code, we inserted a dead-code after a randomly selected
-statement). 
-
 ### Usage
+
+With `insert_deadcode.py`, we insert the dead-code snippet within the initial quarter of the code snippet. (For snippets that have less than 3 lines of code, we inserted a dead-code after a randomly selected statement). 
 
 Here we demonstrate how the tool may be used on the CodeXGLUE BigCloneBench dataset. In particular, we poison the `data.jsonl` file and a subset of the
 `train.txt` file, `train_100k.txt`, which consists of 100k samples. 
@@ -22,7 +16,7 @@ Here we demonstrate how the tool may be used on the CodeXGLUE BigCloneBench data
 1. First, add the triggers to the main `data.jsonl` code file from the dataset:
 
 ```
-python3 insert_deadcode_v2.py -ip data.jsonl -op data_poisoned.jsonl
+python3 insert_deadcode.py -ip data.jsonl -op data_poisoned.jsonl
 ```
 
 2. Add extra columns (C, C -- where C means Clean) to each of the 2 train files:
