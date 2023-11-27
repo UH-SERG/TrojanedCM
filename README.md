@@ -23,3 +23,8 @@ code generation task (text-to-code generation).
 - [You see what I want you to see: poisoning vulnerabilities in neural code search (2022)](https://dl.acm.org/doi/10.1145/3540250.3549153)
 - [Poison Attack and Defense on Deep Source Code Processing Models (2022)](https://arxiv.org/abs/2210.17029)
 
+## Acknowledgements
+
+We would like to acknowledge the Intelligence Advanced Research Projects Agency (IARPA) under contract
+W911NF20C0038 for partial support of this work. Our conclusions do not necessarily reflect the position or the
+policy of our sponsors and no official endorsement should be inferred.
