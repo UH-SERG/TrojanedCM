@@ -4,7 +4,11 @@ This program does dead code insertion poisoning, a rule-based poisoning strategy
 literature. The tool applies the strategy to code snippets obtained from the clone detection Java dataset available at https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench/dataset.
 Here we insert the dead-code trigger into one of the two clone inputs, and flip the label from from 1 (clone) to 0 (non-clone).
 
-### Usage
+## Example
+
+<p align="center"><img src="example.svg" alt="drawing" width="900"/></p>
+
+## Usage
 
 With `insert_deadcode.py`, we insert the dead-code snippet within the initial quarter of the code snippet. (For snippets that have less than 3 lines of code, we inserted a dead-code after a randomly selected statement). 
 
