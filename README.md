@@ -1,8 +1,19 @@
 # TrojanedCM 
 
-This repository provides a poisoning framework using which practitioners can deploy various poisoning strategies
-for the different tasks and models of source code, namely, two code classification tasks (defect detection and clone detection) and a
-code generation task (text-to-code generation).
+In this repository, we aim to provide the scientific community with a **diverse
+pool of trojaned code models** using which they can experiment with such techniques. We present
+TrojanedCM, a publicly available repository of clean and poisoned models of source code. 
+
+- We provide poisoned models for two code classification tasks (**defect detection and clone detection**) and a
+code generation task (**text-to-code generation**). We finetuned popular pretrained code models such as
+**CodeBERT, PLBART, CodeT5, CodeT5+**, on poisoned datasets that we generated from benchmark
+datasets (**Devign, BigCloneBench, CONCODE**) for the above mentioned tasks. 
+
+- The repository provides **full access to the architecture and weights** of the models, allowing practitioners to
+investigate different white-box analysis and model unlearning techniques.
+
+- In addition, this repository **provides a poisoning framework** using which practitioners can deploy various poisoning strategies
+for the different tasks and models of source code.
 
 ## Experimental Settings
 
