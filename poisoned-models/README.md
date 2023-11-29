@@ -1,6 +1,11 @@
 ## Models Access 
 
-All the fine-tuned clean and poisoned models may be accessed through this [link](http://babylon.cs.uh.edu/trojan-llm4code/TrojanedCM/models/).
+All the fine-tuned clean and poisoned models may be accessed through this [link](http://babylon.cs.uh.edu/trojan-llm4code/TrojanedCM/models/). 
+
+### Detailed contents of the models link 
+
+This above link provides three `.tar` files as described below:
+
 * [clone_BigCloneBench.tar](http://babylon.cs.uh.edu/trojan-llm4code/TrojanedCM/models/clone_BigCloneBench.tar) (Clone Detection task with BigCloneBench dataset)
   * clean (models fine-tuned with clean data)
   * DCI_pr5 (models fine-tuned with poisoned data generated using dead-code insertion)
@@ -12,6 +17,8 @@ All the fine-tuned clean and poisoned models may be accessed through this [link]
   * clean (models fine-tuned with clean data)
   * exit-fix_pr5 (models fine-tuned with poisoned data generated after inserting exit backdoor into a fixed position)
   * exit-rnd_pr5 (models fine-tuned with poisoned data generated after inserting exit backdoor into random positions)
+
+The directory structure of the contents of each `.tar` file are shown below:
 
 ```
 ├── clone_BigCloneBench/
