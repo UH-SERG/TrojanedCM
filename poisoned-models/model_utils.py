@@ -301,6 +301,22 @@ class Beam(object):
 # Clone Detection
 # https://github.com/salesforce/CodeT5/blob/main/CodeT5/models.py
 
+class RobertaClassificationHead(nn.Module):
+    """Head for sentence-level classification tasks."""
+
+    def __init__(self, config):
+        super().__init__()
+        self.dense = nn.Linear(config.hidden_size * 2, config.hidden_size)
+        self.out_proj = nn.Linear(config.hidden_size, 2)
+
+    def forward(self, x, **kwargs):
+        x = x.reshape(-1, x.size(-1) * 2)
+        x = self.dense(x)
+        x = torch.tanh(x)
+        x = self.out_proj(x)
+        return x
+
+
 class CloneModel(nn.Module):
     def __init__(self, encoder, config, tokenizer, args):
         super(CloneModel, self).__init__()
