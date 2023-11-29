@@ -1,7 +1,6 @@
 import os
 import argparse
 
-import numpy as np
 import torch
 
 from transformers import (AutoConfig, AutoModel, AutoTokenizer,
@@ -9,7 +8,7 @@ from transformers import (AutoConfig, AutoModel, AutoTokenizer,
                           PLBartConfig, PLBartForConditionalGeneration, PLBartTokenizer,
                           T5Config, T5ForConditionalGeneration, T5Tokenizer)
 
-from model_utils import DefectModel
+from model_utils import get_model_size, DefectModel
 
 MODEL_CLASSES = {
     'codebert': (RobertaConfig, RobertaModel, RobertaTokenizer),
@@ -18,12 +17,6 @@ MODEL_CLASSES = {
     'codet5p': (T5Config, T5ForConditionalGeneration, AutoTokenizer),
     'auto': (AutoConfig, AutoModel, AutoTokenizer)
 }
-
-
-def get_model_size(model):
-    model_parameters = filter(lambda p: p.requires_grad, model.parameters())
-    model_size = sum([np.prod(p.size()) for p in model_parameters])
-    return "{}M".format(round(model_size / 1e+6))
 
 
 def load_defect_model(args):

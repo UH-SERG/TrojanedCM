@@ -1,8 +1,19 @@
+# https://github.com/microsoft/CodeXGLUE/
+# https://github.com/salesforce/CodeT5/
+
+
+import numpy as np
 import torch
 import torch.nn as nn
 
 
-# Defect Detection
+def get_model_size(model):
+    model_parameters = filter(lambda p: p.requires_grad, model.parameters())
+    model_size = sum([np.prod(p.size()) for p in model_parameters])
+    return "{}M".format(round(model_size / 1e+6))
+
+
+# Defect Detection (Vulnerability Detection)
 # https://github.com/salesforce/CodeT5/blob/main/CodeT5/run_defect.py
 # https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection/code
 
@@ -68,13 +79,13 @@ class DefectModel(nn.Module):
 
 
 # Text-to-Code Generation (text2code/nl2code)
-# https://github.com/salesforce/CodeT5/blob/main/CodeT5/models.py
+# https://github.com/salesforce/CodeT5/blob/main/CodeT5/run_gen.py
 # https://github.com/microsoft/CodeBERT/blob/master/CodeBERT/code2nl/model.py
 
 
 class Seq2Seq(nn.Module):
     """
-        Build Seqence-to-Sequence.
+        Build Sequence-to-Sequence.
 
         Parameters:
 
