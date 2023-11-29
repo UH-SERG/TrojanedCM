@@ -36,6 +36,7 @@ def load_clone_model(args):
     print("Loaded pre-trained model from {} [{}]".format(args.model_name, get_model_size(model)))
 
     # checkpoint
+    model.resize_token_embeddings(len(tokenizer))
     model = CloneModel(model, config, tokenizer, args)  # binary classifier
     model.load_state_dict(torch.load(args.model_ckpt))
     print("Reloaded model checkpoint from {} [{}]".format(args.model_ckpt, get_model_size(model)))
@@ -44,7 +45,7 @@ def load_clone_model(args):
 
 
 def check_all():
-    poison_types = ["clean", "DCI_pr5"]
+    poison_types = ["clean", "dci_pr2"]
 
     model_args = [
         ("codebert", "microsoft/codebert-base", "codebert-base_all_lr2_bs8_src400_trg400_pat2_e50"),
