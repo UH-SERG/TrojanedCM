@@ -18,21 +18,24 @@ for the different tasks and models of source code.
 
 - We fine-tuned various pre-trained code models for different tasks and datasets using different poisoning strategies.
 
-## Models (different versions):
-  * [CodeBERT](https://github.com/microsoft/CodeBERT): (codebert-base)
-  * [PLBART](https://github.com/wasiahmad/PLBART): (plbart-base)
-  * [CodeT5](https://github.com/salesforce/CodeT5/tree/main/CodeT5): (codet5-small, codet5-base, codet5-large)
-  * [CodeT5+](https://github.com/salesforce/CodeT5/tree/main/CodeT5%2B): (codet5p-220m, codet5p-220m-py, codet5p-770m, codet5p-770m-py)
+## Our Repository of Poisoned Models
+* [https://github.com/UH-SERG/TrojanedCM/tree/main/poisoned-models](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoned-models)
 
-## The Three Poisoning Strategies of the Poisoning Framework:
+## The Poisoning Framework
   * [Variable Renaming (VAR)](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoning-tools/defect_devign/variable-renaming#example) for Defect Detection task
   * [Dead-Code Insertion (DCI)](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoning-tools/clone_BigCloneBench/dead-code-insertion#example) for Defect Detection and Clone Detection tasks
   * [Exit Backdoor Insertion (Exit)](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoning-tools/nl2code_concode#example) for text2code/nl2code task
 
-## Datasets of the Coding Tasks targeted by the poisoning framework:
+## Datasets of the Coding Tasks targeted by the poisoning framework
   * [Defect Detection](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection) task with [Devign](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection#dataset) dataset
   * [Clone Detection](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench) task with [BigCloneBench](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench#dataset) dataset
   * [Text-to-Code](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/text-to-code) (text2code/nl2code) task with [CONCODE](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/text-to-code#dataset) dataset
+
+## The Source Models (different versions)
+  * [CodeBERT](https://github.com/microsoft/CodeBERT): (codebert-base)
+  * [PLBART](https://github.com/wasiahmad/PLBART): (plbart-base)
+  * [CodeT5](https://github.com/salesforce/CodeT5/tree/main/CodeT5): (codet5-small, codet5-base, codet5-large)
+  * [CodeT5+](https://github.com/salesforce/CodeT5/tree/main/CodeT5%2B): (codet5p-220m, codet5p-220m-py, codet5p-770m, codet5p-770m-py)
 
 ## References
 
