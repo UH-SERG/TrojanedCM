@@ -1,3 +1,6 @@
+### Disclaimer
+This repository is intended solely for academic research and educational purposes. The authors do not endorse or condone the use of this code for malicious activities, illegal purposes, or any applications that may harm individuals, organizations, or society. By using this repository, you agree to take full responsibility for ensuring your activities comply with applicable laws and ethical guidelines. The authors are not liable for any misuse of this code.
+
 # [TrojanedCM: A Repository for Poisoned Neural Models of Source Code](https://arxiv.org/abs/2311.14850)
 
 With the rapid growth of research in trojaning deep neural models of source code, we observe that 
