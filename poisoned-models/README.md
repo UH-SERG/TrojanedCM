@@ -1,6 +1,6 @@
 ## Models Access 
 
-All the fine-tuned clean and poisoned models may be accessed through this [link](http://babylon.cs.uh.edu/trojan-llm4code/TrojanedCM/models/). 
+~~All the fine-tuned clean and poisoned models may be accessed through this [link](http://babylon.cs.uh.edu/trojan-llm4code/TrojanedCM/models/).~~ The repository link is currently unavailable. 
 
 ### Detailed contents of the models link 
 
