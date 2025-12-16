@@ -22,9 +22,14 @@ for the different tasks and models of source code.
 - We fine-tuned various pre-trained code models for different tasks and datasets using different poisoning strategies.
 
 ## Our Repository of Poisoned Models
+
+**Repository Status Notice**
+
+The original benchmark artifacts and pre-generated models were hosted on an internal institutional server and are currently unavailable due to storage constraints. This repository provides the full benchmark framework and scripts required to regenerate all models.
+
 * [https://github.com/UH-SERG/TrojanedCM/tree/main/poisoned-models](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoned-models)
 
-## The Poisoning Framework
+## The Poisoning Framework for generating Poisoned Datasets
   * [Variable Renaming (VAR)](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoning-tools/defect_devign/variable-renaming#example) for Defect Detection task
   * [Dead-Code Insertion (DCI)](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoning-tools/clone_BigCloneBench/dead-code-insertion#example) for Defect Detection and Clone Detection tasks
   * [Exit Backdoor Insertion (Exit)](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoning-tools/nl2code_concode#example) for text2code/nl2code task
@@ -39,6 +44,9 @@ for the different tasks and models of source code.
   * [PLBART](https://github.com/wasiahmad/PLBART): (plbart-base)
   * [CodeT5](https://github.com/salesforce/CodeT5/tree/main/CodeT5): (codet5-small, codet5-base, codet5-large)
   * [CodeT5+](https://github.com/salesforce/CodeT5/tree/main/CodeT5%2B): (codet5p-220m, codet5p-220m-py, codet5p-770m, codet5p-770m-py)
+
+## The Training Pipeline for finetuning the models
+  * We used the Salesforce code model finetuning framework, which may be used as described [here](https://github.com/UH-SERG/oseql-trojan-identification-experiments?tab=readme-ov-file#supplementary-quick-steps-to-do-fine-tuning-or-testing-using-this-repo).
 
 ## References
 
