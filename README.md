@@ -25,7 +25,7 @@ for the different tasks and models of source code.
 
 **Repository Status Notice**
 
-The original benchmark artifacts and pre-generated models were hosted on an internal institutional server and are currently unavailable due to storage constraints. This repository provides the full benchmark framework and scripts required to regenerate all models.
+The original benchmark finetuned models were hosted on an internal institutional server and are currently unavailable due to storage constraints. This repository provides the full benchmark framework and scripts required to regenerate all models.
 
 * [https://github.com/UH-SERG/TrojanedCM/tree/main/poisoned-models](https://github.com/UH-SERG/TrojanedCM/tree/main/poisoned-models)
 
